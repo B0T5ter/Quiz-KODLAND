@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz AI</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        header { display: flex; justify-content: space-between; align-items: center; }
+        footer { margin-top: 40px; border-top: 1px solid #ccc; padding-top: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Quiz AI 🔥</h1>
+    <div class="best-score">Najlepszy wynik: {{ best_score }}%</div>
+</header>
+
+<form method="POST">
+    <!-- Pytanie 1 -->
+    <p><strong>Pytanie 1:</strong> Która biblioteka Pythona jest najczęściej używana w sztucznej inteligencji?</p>
+    <label><input type="radio" name="q1" value="Flask" required> Flask</label><br>
+    <label><input type="radio" name="q1" value="TensorFlow" required> TensorFlow</label><br>
+    <label><input type="radio" name="q1" value="Django" required> Django</label><br>
+    <hr>
+
+    <!-- Pytanie 2 -->
+    <p><strong>Pytanie 2:</strong> Co oznacza skrót NLP?</p>
+    <label><input type="radio" name="q2" value="Neural Learning Process" required> Neural Learning Process</label><br>
+    <label><input type="radio" name="q2" value="Przetwarzanie języka naturalnego" required> Przetwarzanie języka naturalnego</label><br>
+    <label><input type="radio" name="q2" value="Network Logic Program" required> Network Logic Program</label><br>
+    <hr>
+
+    <!-- Pytanie 3 -->
+    <p><strong>Pytanie 3:</strong> Który model jest głównie używany do rozpoznawania obrazów?</p>
+    <label><input type="radio" name="q3" value="CNN" required> CNN</label><br>
+    <label><input type="radio" name="q3" value="RNN" required> RNN</label><br>
+    <label><input type="radio" name="q3" value="GPT" required> GPT</label><br>
+    <hr>
+
+    <!-- Pytanie 4 -->
+    <p><strong>Pytanie 4:</strong> Która funkcjonalność Pythona jest często wykorzystywana w aplikacjach AI?</p>
+    <label><input type="radio" name="q4" value="List comprehensions" required> List comprehensions</label><br>
+    <label><input type="radio" name="q4" value="Decorators" required> Dekoratory</label><br>
+    <label><input type="radio" name="q4" value="Operacje na tensorach" required> Operacje na tensorach</label><br>
+    <hr>
+
+    <button type="submit">Wyślij odpowiedzi</button>
+</form>
+
+{% if score is not none %}
+    <h2>Twój wynik: {{ score }}%</h2>
+{% endif %}
+
+<footer>
+    Stworzone przez Filipa Targosza 😎
+</footer>
+
+</body>
+</html>
